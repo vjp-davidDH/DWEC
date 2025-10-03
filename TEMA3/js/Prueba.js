@@ -1,5 +1,14 @@
-console.log("1. " + new Date().toString);
-let id = setTimeout(() => console.log("2. " + new Date().toString), 5000);
-console.log("3. " + new Date().toString);
-let asd = prompt("Quieres para el TimeOut: ")
-clearTimeout((asd === "si") ? clearTimeout(id) : "Éxito") 
+var elementosP = document.getElementsByTagName("p");
+for (let item of elementosP) {
+    console.log(item.id);
+}
+
+for (let item of elementosP) {
+    if (item.classList.contains("parrafos")) {
+        item.remove();
+    }
+}
+
+for (let item of elementosP) {
+    console.log(item.id);
+}
